@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import requests from '../../utils/requests';
+import requests from '../../Utils/requests';
 import axios from '../../Utils/axios';
 import "./banner.css"
 // console.log("API Key:", import.meta.env.VITE_API_KEY);
