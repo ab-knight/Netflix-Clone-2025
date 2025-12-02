@@ -1,43 +1,89 @@
-.header_outer_container{
-    position: sticky;
-    top: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: hsl(0, 0%, 0%);
-    /* background-color: transparent; */ 
-    height: 10vh;
-    color: white;
-    transition: all 0.5s;
-    transition-timing-function: ease-in;
-    z-index: 1;
-}
-.nav_black{
-background-color: hsl(0, 0%, 0%);
-}
-.header_container {
-    width: 90%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  /* background-color: yellow; */
+
+.header_outer_container {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  height: 10vh;
+  color: white;
+  z-index: 20;
+  transition: all 0.4s ease;
 }
 
-.header_left ul
-{
-    width: 140%; 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    list-style: none;  
-    /* gap: 20px; */
-    cursor: pointer;
+.header_container {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.header_right ul{
-    width: 150%; 
-    display: flex;
-    justify-content: space-between;
-    list-style: none;  
-    /* gap: 20px; */
-    cursor: pointer;
+
+.header_left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
+
+/* Desktop Menu */
+.desktop_menu {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  list-style: none;
+  cursor: pointer;
+}
+
+/* MOBILE BROWSE BUTTON (HIDDEN ON DESKTOP) */
+.mobile_browse {
+  display: none;
+  font-size: 18px;
+  cursor: pointer;
+  align-items: center;
+}
+
+/* MOBILE DROPDOWN */
+.mobile_menu {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 60px;
+  left: 20px;
+  padding: 15px;
+  background: rgba(0,0,0,0.85);
+  border-radius: 8px;
+  list-style: none;
+  gap: 15px;
+  width: 200px;
+  z-index: 999;
+}
+
+.header_right ul {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  list-style: none;
+}
+
+/* -------------------------------------
+    RESPONSIVE BEHAVIOR (IMPORTANT)
+------------------------------------- */
+@media (max-width: 900px) {
+
+  /* Hide Desktop menu on mobile */
+  .desktop_menu {
+    display: none;
+  }
+
+  /* Show Browse button */
+  .mobile_browse {
+    display: flex;
+  }
+
+  /* Show Mobile Dropdown menu */
+  .mobile_menu {
+    display: flex;
+  }
+}
+
+

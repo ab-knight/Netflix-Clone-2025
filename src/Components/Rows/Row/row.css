@@ -1,7 +1,9 @@
 .row_poster {
-    width: 100%;
+    /* width: 100%; */
+    width: auto;
     object-fit: contain;
-    max-height: 100px;
+    /* max-height: 100px; */
+    max-height: 140px;
     transition: transform 450ms;
     margin-right: 10px;
 }
@@ -31,4 +33,19 @@
 .row {
     margin-left: 20px;
     color: white;
+}
+
+@media (max-width: 900px) {
+  .row_poster {
+    max-height: 120px;
+  }
+  .row_posterLarge {
+    max-height: 180px;
+  }
+}
+
+@media (max-width: 600px) {
+  .row_poster {
+    max-height: 100px;
+  }
 }

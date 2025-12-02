@@ -4,7 +4,7 @@ import requests from '../../../Utils/requests';
 
 function RowList() {
   return (
-    <>
+    <div className='rows_container'>
       <Row
         title="NETFLIX ORIGINALS"
         fetchUrl={requests.fetchNetflixOriginals}
@@ -18,7 +18,7 @@ function RowList() {
       <Row title="TV Shows" fetchUrl={requests.fetchTVShow}/>
       <Row title="Documentaries" fetchUrl={requests.fetchDocumentaries}/>
       
-    </>
+    </div>
   );
 }
 

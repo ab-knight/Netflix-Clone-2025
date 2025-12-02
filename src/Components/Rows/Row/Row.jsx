@@ -33,8 +33,8 @@ const Row = ({ title, fetchUrl, isLargeRow }) => {
         (url) => {
           console.log(url);
           const urlParams = new URLSearchParams(new URL(url).search);
-          console.log(urlParams);
-          console.log(urlParams.get("v"));
+          // console.log(urlParams);
+          // console.log(urlParams.get("v"));
           setTrailerUrl(urlParams.get("v"));
         }
       );
