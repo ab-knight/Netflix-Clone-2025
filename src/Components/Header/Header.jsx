@@ -1,5 +1,5 @@
-// 
-import React, { useState } from "react";
+
+import React, { useEffect, useState } from "react";
 import "./header.css";
 import NetflixLogo from "../../assets/Images/Netflix_Logo.png";
 import SearchIcon from "@mui/icons-material/Search";
@@ -9,12 +9,31 @@ import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 
 function Header() {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+    useEffect(() => {
+      const handleScroll = () => {
+        if (window.scrollY > 0) {
+          setIsScrolled(true);
+        } else {
+          setIsScrolled(false);
+        }
+      };
+      window.addEventListener("scroll", handleScroll);
+      return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
 
   return (
-    <div className="header_outer_container">
+    <div
+      className={`header_outer_container ${isScrolled ? "header_black" : ""}`}
+    >
       <div className="header_container">
         <div className="header_left">
-              <img src={NetflixLogo} alt="Netflix Logo" className="logo" width="100" />
+          <img
+            src={NetflixLogo}
+            alt="Netflix Logo"
+            className="logo"
+            width="100"
+          />
 
           {/* Desktop Menu */}
           <ul className="desktop_menu">
@@ -69,3 +88,40 @@ function Header() {
 }
 
 export default Header;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

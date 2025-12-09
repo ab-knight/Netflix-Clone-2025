@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 import requests from '../../Utils/requests';
 import axios from '../../Utils/axios';
 import "./banner.css"
-// console.log("API Key:", import.meta.env.VITE_API_KEY);
 
 
 const Banner = () => {
@@ -12,7 +11,6 @@ const Banner = () => {
     (async () => {
       try {
         const request = await axios.get(requests.fetchNetflixOriginals);
-        // console_log(request);
         setMovie(
           request.data.results[
             Math.floor(Math.random() * request.data.results.length)

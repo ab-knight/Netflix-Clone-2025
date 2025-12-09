@@ -1,16 +1,141 @@
-# React + Vite
+📺 Netflix Clone (React + TMDB API)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A fully responsive Netflix Clone built using React, TMDB API, and Axios, featuring:
 
-Currently, two official plugins are available:
+🎬 Movie categories (Trending, Originals, Top Rated, etc.)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🎞 Horizontal scrolling movie rows
 
-## React Compiler
+▶ YouTube trailer player (on movie click)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+🟥 Netflix-style fixed header with scroll effect
 
-## Expanding the ESLint configuration
+📱 Fully responsive mobile menu
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+⚡ Fast fetching with Axios
+
+🎨 Smooth hover animations
+
+🚀 Live Demo
+
+https://ab-knight.github.io/Netflix-Clone-2025/
+
+📌 Features
+✅ Frontend
+
+Netflix-style UI
+
+Responsive header with mobile dropdown
+
+Scroll-triggered black header
+
+Row component with horizontal scroll
+
+Large & small movie posters
+
+Hover zoom animation
+
+YouTube trailer popup
+
+🔌 API
+
+Fetches movies from The Movie Database (TMDB)
+
+Uses Axios for all API requests
+
+Supports multiple categories
+
+📱 Responsive
+
+Works on desktop, tablet, and mobile
+
+Mobile-friendly browse menu
+
+Adaptive row sizes based on screen
+
+🛠️ Tech Stack
+Technology	Purpose
+React.js	Frontend framework
+Axios	API requests
+TMDB API	Movie data
+movie-trailer	Finds trailer URLs
+react-youtube	Embeds YouTube trailers
+CSS / Flexbox	Styling & layout
+📂 Project Structure
+src/
+ ├── components/
+ │    ├── Header/Header.jsx
+ │    ├── Header/header.css
+ │    ├── Row/Row.jsx
+ │    ├── Row/Row.css
+ │    └── Banner/Banner.jsx (if you have one)
+ ├── Utils/
+ │    └── axios.js
+ ├── App.js
+ ├── index.js
+ └── assets/
+      └── Images/
+
+🔧 Installation & Setup
+1️⃣ Clone the repository
+git clone https://github.com/ab-knight/netflix-clone.git
+cd netflix-clone
+
+2️⃣ Install dependencies
+npm install
+
+3️⃣ Create .env file
+
+Inside your project root:
+
+REACT_APP_TMDB_API_KEY=your_api_key_here
+
+4️⃣ Start development server
+npm start
+
+🔑 Setting up TMDB API
+
+Go to https://www.themoviedb.org/
+
+Create an account
+
+Navigate to Settings → API
+
+Generate API Key (v3 auth)
+
+Paste into your .env file
+
+🖥️ Usage
+
+Browse movie categories
+
+Hover to see animation
+
+Click movie → Auto-search trailer → Play in YouTube popup
+
+Scroll horizontally to see all movies
+
+Mobile: Use the Browse dropdown
+
+Header turns black when scrolling
+
+🧩 Future Improvements
+
+Add user authentication (Firebase)
+
+Add “My List” page
+
+Add search functionality
+
+Add pagination
+
+Add loading skeletons
+
+🤝 Contributing
+
+Pull requests are welcome!
+For major changes, open an issue first.
+
+📜 License
+
+This project is licensed under MIT License.
